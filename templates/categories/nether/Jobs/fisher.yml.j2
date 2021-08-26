@@ -1,0 +1,95 @@
+Fisher:
+  fullname: Fisher
+  shortname: Fi
+  description: Earns points catching fish and rare treasures.
+  ChatColour: DARK_AQUA
+  chat-display: full
+  max-level: 666
+  leveling-progression-equation: 10*(joblevel*joblevel)+(joblevel*joblevel*4)
+  income-progression-equation: baseincome+(baseincome*(joblevel-1)*0.01)-((baseincome+(baseincome*(joblevel-1)*0.01))
+    * ((numjobs-1)*0.05))
+  points-progression-equation: basepoints
+  experience-progression-equation: baseexperience
+  rejoinCooldown: 10
+  maxDailyQuests: 1
+  Quests:
+    '1':
+      Name: Another Fish In The Sea
+      Objectives:
+      - Catch;cod;1
+      - Catch;salmon;1
+      - Catch;pufferfish;1
+      - Catch;tropical_fish;1
+      RewardCommands:
+      - jobs editpoints add [playerName] 100
+      - jobs exp add [playerName] 100
+      - msg [playerName] Completed quest!
+      RewardDesc:
+      - Catch some fish and 
+      - Get 100 points & exp for this!
+    '2':
+      Name: Replacement Rod
+      Objectives:
+      - Catch;fishing_rod;1
+      RewardCommands:
+      - jobs editpoints add [playerName] 100
+      - jobs exp add [playerName] 100
+      - msg [playerName] Completed quest!
+      RewardDesc:
+      - Catch a new rod and
+      - Get 100 points & exp for this!
+    '3':
+      Name: Neptune's Diary
+      Objectives:
+      - Catch;enchanted_book;1
+      RewardCommands:
+      - jobs editpoints add [playerName] 100
+      - jobs exp add [playerName] 100
+      - msg [playerName] Completed quest!
+      RewardDesc:
+      - Catch an enchanted book and 
+      - Get 100 points & exp for this!
+  Gui:
+    Id: 346
+    Data: 0
+  Catch:
+    cod:
+      income: 0
+      points: 150.0
+      experience: 150.0
+    salmon:
+      income: 0
+      points: 300.0
+      experience: 300.0
+    pufferfish:
+      income: 0
+      points: 500.0
+      experience: 500.0
+    tropical_fish:
+      income: 0
+      points: 2500.0
+      experience: 2500.0
+    bow:
+      income: 0
+      points: 750.0
+      experience: 750.0
+    enchanted_book:
+      income: 0
+      points: 800.0
+      experience: 800.0
+    fishing_rod:
+      income: 0
+      points: 750.0
+      experience: 750.0
+    name_tag:
+      income: 0
+      points: 750.0
+      experience: 750.0
+    nautilus_shell:
+      income: 0
+      points: 1000.0
+      experience: 1000.0
+    saddle:
+      income: 0
+      points: 750.0
+      experience: 750.0
