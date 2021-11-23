@@ -7,6 +7,9 @@ DevotedMC 1.17.1 Ansible sharding deployment environment
 
 First of all note that Ansible does not support Windows, you will need a UNIX based operating system. DevotedMC uses Debian and all instructions in the following will be based on that (should also work on Ubuntu). Note that the Windows Subsystem for Linux is NOT a UNIX based operating system, do not report issues when trying to run this setup on it and install a proper OS.
 
+### Windows Subsystem for Linux 2
+Rhea will deploy just fine on WSL2 installed with Ubuntu or Debian. The only notable difference is instead of localhost you use 127.0.0.1 and you absolutely cannot have MariaDB running on Windows. You can only have MySQL running in WSL2, any MySQL running on Windows will make your WSL2 database not work at all. The only other thing is you cannot login to the minecraft server hosted on WSL2 from localhost nor 127.0.0.1, you must open a windows terminal and wsl hostname -I to get the ip address WSL2 has been given every time you start it up. --Instructions by Wingzero54 who will provide no support, just stating it's possible. 
+
 
 - Install Java (minimum 11)
 
