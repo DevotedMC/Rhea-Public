@@ -18,27 +18,27 @@
      when: "{{ do_deploy | default('false') }}"
 
    - name: Warn restart
-     include: "tasks/warn-restart-10.yml"
+     include: "tasks/startstop/warn-restart-10.yml"
      when: "{{ do_warn10 | default('false') }}"
 
    - name: Warn restart
-     include: "tasks/warn-restart-5.yml"
+     include: "tasks/startstop/warn-restart-5.yml"
      when: "{{ do_warn5 | default('false') }}"
 
    - name: Warn restart
-     include: "tasks/warn-restart-1.yml"
+     include: "tasks/startstop/warn-restart-1.yml"
      when: "{{ do_warn1 | default('false') }}"
 
    - name: Stop Minecraft Server
-     include: "tasks/stop-minecraft.yml"
+     include: "tasks/startstop/stop-minecraft.yml"
      when: "{{ do_stopminecraft | default('false') }}"
 
    - name: Stop BungeeCord
-     include: "tasks/stop-bungee.yml"
+     include: "tasks/startstop/stop-bungee.yml"
      when: "{{ do_stopbungee | default('false') }}"
 
    - name: Backup server
-     include: "tasks/backup-server.yml"
+     include: "tasks/backup/backup-server.yml"
      when: "{{ do_backup | default('false') }}"
 
    - name: Deploy Server
@@ -46,11 +46,11 @@
      when: "{{ do_update | default('false') }}"
 
    - name: Start BungeeCord
-     include: "tasks/start-bungee.yml"
+     include: "tasks/startstop/start-bungee.yml"
      when: "{{ do_startbungee | default('false') }}"
 
    - name: Start Minecraft Server
-     include: "tasks/start-minecraft.yml"
+     include: "tasks/startstop/start-minecraft.yml"
      when: "{{ do_startminecraft | default('false') }}"
 
    - name: Extract partial backup
@@ -58,5 +58,5 @@
      when: "{{ extract_single_region | default('false') }}"
 
    - name: Do duplicity
-     include: "tasks/duplicity-backups.yml"
+     include: "tasks/backup/duplicity-backups.yml"
      when: "{{ do_duplicity | default('false') }}"
