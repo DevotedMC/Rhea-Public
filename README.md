@@ -71,6 +71,16 @@ remote_backup_password: ink
 #URL to use for FTP backup point
 remote_backup_server: some.backup.domain
 
+global_mysql_database: gdb
+global_mysql_user: root
+global_mysql_password: password
+votifier_token: 123456
+postgres_user: root
+postgres_password: password
+postgres_host: localhost
+postgres_port: 3306
+postgres_database: pdb
+
 mysql_passwords:
   alpha: abcd
   beta: abcd
